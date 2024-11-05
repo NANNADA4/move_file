@@ -31,7 +31,7 @@ for root, dirs, files in os.walk(folder_path):
             destination_file_path = os.path.join(target_folder, file)
 
             try:
-                shutil.move(source_file_path, destination_file_path)
+                shutil.copy(source_file_path, destination_file_path)
                 print(f"{file} 파일이 {target_folder}로 이동되었습니다.")
             except Exception as e:
                 print(f"파일 이동 중 오류 발생: {e}")
